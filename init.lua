@@ -416,8 +416,8 @@ function createTrackerFrame()
 	trackerFrame:SetHeight(addon.db.profile.trackerFrameHeight)
   trackerFrame:SetBackdrop({
         bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16,
-        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16,
-        insets = {left = 3, right = 3, top = 3, bottom = 3},
+        edgeFile = "Interface\\AddOns\\HiGoatDKP\\textures\\BorderSquare1", edgeSize = 10,
+	insets = {left = 2, right = 2, top = 2, bottom = 2},
     })
     trackerFrame:SetBackdropColor(24/255, 24/255, 24/255)
     trackerFrame:SetBackdropBorderColor(100/255, 100/255, 100/255)
@@ -459,18 +459,9 @@ function createTrackerFrame()
 	cheader:SetShadowOffset(.8, -.8)
 	cheader:SetShadowColor(0, 0, 0, 1)
 
-	local close = trackerFrame:CreateTexture(nil, "ARTWORK")
-	close:SetTexture("Interface\\AddOns\\HiGoatDKP\\textures\\otravi-close")
-	close:SetTexCoord(0, .625, 0, .9333)
-	close:SetWidth(20)
-	close:SetHeight(14)
-	close:SetPoint("TOPRIGHT", trackerFrame, "TOPRIGHT", -7, -15)
-
-	local closebutton = CreateFrame("Button", nil)
-	closebutton:SetParent(trackerFrame)
-	closebutton:SetWidth(20)
-	closebutton:SetHeight(14)
-	closebutton:SetPoint("CENTER", close, "CENTER")
+	local closebutton = CreateFrame("Button", nil, trackerFrame, "UIPanelCloseButton")
+	closebutton:SetSize(30, 30)
+	closebutton:SetPoint("TOPRIGHT", -11, -8)
 	closebutton:SetScript("OnClick", function()
 		trackerFrame:Hide()
 		trackerFrame.trackingId = nil
