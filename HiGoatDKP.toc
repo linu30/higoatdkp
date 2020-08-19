@@ -1,0 +1,16 @@
+## Interface: 11305
+## Title: HiGoatDKP
+## Notes: HiGoatDKP Tracker, written by Craz.
+## SavedVariables: HGDB
+## Author: Craz
+## Version: 0.0.1
+
+embeds.xml
+init.lua
+functions.lua
+guild.lua
+raid.lua
+zones.lua
+bosses.lua
+comm.lua
+
