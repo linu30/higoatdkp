@@ -109,7 +109,7 @@ end
 
 -- Initialization
 
-addon.hasIcon = "Interface\\Icons\\Spell_Holy_DivineIntervention"
+addon.hasIcon = "Interface\\Icons\\ability_mount_mountainram"
 
 local function set(key, val)
 	addon.db.profile[key] = val
