@@ -109,7 +109,7 @@ end
 
 -- Initialization
 
-addon.hasIcon = "Interface\\Icons\\ability_mount_mountainram"
+addon.hasIcon = "Interface\\AddOns\\HiGoatDKP\\icons\\goat.tga"
 
 local function set(key, val)
 	addon.db.profile[key] = val
